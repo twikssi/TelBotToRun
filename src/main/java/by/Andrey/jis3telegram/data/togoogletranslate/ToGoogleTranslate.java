@@ -1,5 +1,7 @@
 package by.Andrey.jis3telegram.data.togoogletranslate;
 
+
+
 public class ToGoogleTranslate {
     public static final String urlGoogle = "https://translate.google.by/?hl=ru&sl=en&tl=es&text=";
 
@@ -11,10 +13,12 @@ public class ToGoogleTranslate {
         String correctText = textInccorrect;
         correctText = correctText.replace("\"", " ");
         correctText = correctText.replace("/", " ");
+        correctText = correctText.replace("'","%27");
         return correctText;
     }
 
     public static String getUrlGoogleWithCorrectText(String correctText){
-        return urlGoogle.concat(replaceAllspaceOn20Percent(replaceIncorrectSymbals(correctText)));
+            String link = urlGoogle.concat(replaceAllspaceOn20Percent(replaceIncorrectSymbals(correctText))).concat("&op=translate");
+            return link;
     }
 }

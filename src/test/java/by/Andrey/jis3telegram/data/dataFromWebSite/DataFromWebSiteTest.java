@@ -39,10 +39,12 @@ public class DataFromWebSiteTest {
 
     @Test
     public void addWordVocabularyInList() {
-        DataFromWebSite fromWebSite = new DataFromWebSite("feather");
+        DataFromWebSite fromWebSite = new DataFromWebSite("guess");
         fromWebSite.addWordVocabularyInList();
 
+        fromWebSite.pullOutMoreExamplesFromWebSiteNew().forEach(System.out::println);
         fromWebSite.getWordVocabularyList().forEach(System.out::println);
 
     }
+
 }

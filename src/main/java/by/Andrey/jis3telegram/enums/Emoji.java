@@ -15,6 +15,7 @@ public enum Emoji {
     CLEVER(EmojiParser.parseToUnicode("&#127808;")),
     PIN(EmojiParser.parseToUnicode("&#128204;")),
     TILDA(EmojiParser.parseToUnicode("&#12336;")),
+    DELPHIN(EmojiParser.parseToUnicode("&#128044;")),
     QUESTION_AND(EmojiParser.parseToUnicode("&#8265;"));
 
     Emoji(String emojiName) {

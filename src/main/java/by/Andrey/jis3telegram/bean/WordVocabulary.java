@@ -19,11 +19,11 @@ public class WordVocabulary {
     public String toString() {
         return "WordVocabulary{" + "\n" +
                 "name='" + name + '\'' + "\n" +
-                ", partsOfSpeech='" + partsOfSpeech + '\'' + "\n" +
-                ", transcription='" + transcription + '\'' + "\n" +
-                ", meaning='" + meaning + '\'' + "\n" +
-                ", examples='" + examples + '\'' + "\n" +
-                ", moreExample='" + moreExample + '\'' + "\n" +
+                "partsOfSpeech='" + partsOfSpeech + '\'' + "\n" +
+                "transcription='" + transcription + '\'' + "\n" +
+                "meaning='" + meaning + '\'' + "\n" +
+                "examples='" + examples + '\'' + "\n" +
+                "moreExample='" + moreExample + '\'' + "\n" +
                 '}';
     }
 }

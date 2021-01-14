@@ -8,6 +8,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -82,7 +83,7 @@ public class DataFromWebSite {
 
     public List<String> pullOutMoreExamplesFromWebSiteNew() {
         Elements element = doc.getElementsByClass("eg dexamp hax");
-        return element.stream().map(a -> Jsoup.parse(a.toString()).text()).collect(Collectors.toList());
+        return element.stream().map(a ->Jsoup.parse(a.toString()).text()).collect(Collectors.toList());
     }
 
     public List<String> pullOutPartOfSpeechFromWebSiteNew() {
@@ -151,7 +152,7 @@ public class DataFromWebSite {
             Elements examples = meaning.getElementsByClass("examp dexamp");
 
             for (Element example : examples) {
-                text = text + Emoji.CLEVER + Jsoup.parse(example.toString()).text() + "\n";
+                text = text + Jsoup.parse(example.toString()).text() + "\n";
             }
             exampleList.add(text);
         }
